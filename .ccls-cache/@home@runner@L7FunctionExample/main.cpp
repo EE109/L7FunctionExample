@@ -1,4 +1,4 @@
-/*0*******************************************
+/*********************************************
 * Alabama A&M University - EE109 - Spring 2023
 * Lesson 7 & 8 sample code: functions and 'if'
 *   & 'else if'  operations
@@ -25,7 +25,7 @@ int main()
       Place menu here
       */
       cout << "\n\n0 - Exit Program";
-      
+      cout << "\n\nPlease make your selection (0-2): ";
       //collect user input
       cin >> selection;
       
@@ -34,21 +34,20 @@ int main()
       {
         boilPasta();
       }
-      else if (x == 2)
+      else if (selection == 2)
       {
         cout << "\nHow many fish do you want to catch?\n";
         cin >> numberFish;
         howToFish(numberFish);
       }
-      else if (x == 0)
+      else if (selection == 0)
       {
+        cout << "\nThanks, the program is over.";
         return 0;
       }
       selection = -1;//return to menu
     }
-  
-  
-  
+    
   return 0;
 }
 
