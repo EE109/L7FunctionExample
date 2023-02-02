@@ -2,8 +2,9 @@
 * Alabama A&M University - EE109 - Spring 2023
 * Lesson 7 & 8 sample code: functions and 'if'
 *   & 'else if'  operations
-* By: Prof J Zehnpfennig, PE
-* Last Updated: 02 Februrary 2023
+* By:            Prof J Zehnpfennig, PE
+* Created:       31 January 2023
+* Last Updated:  02 Februrary 2023
 *********************************************/
 #include <iostream>
 
@@ -14,24 +15,39 @@ void howToFish(int numFish);
 
 int main() 
 {
-  int numberFish = 0;
-  boilPasta();
-  
-  /*
-  Place menu here
-  */
-  
-  //collect user input
+  int numberFish = 0, selection = 7;
 
-  //launch selected function or exit
-  cout << "\nHow many fish do you want to catch?\n";
-  cin >> numberFish;
-  howToFish(numberFish);
+  while (selection < 0 || selection > 6)
+    {
+      cout << "\n\n1 - Pasta Cooking Tutorial";
+      cout << "\n\n2 - Fishing Tutorial";   
+      /*
+      Place menu here
+      */
+      cout << "\n\n0 - Exit Program";
+      
+      //collect user input
+      cin >> selection;
+      
+      //launch selected function or exit
+      if (selection == 1)
+      {
+        boilPasta();
+      }
+      else if (x == 2)
+      {
+        cout << "\nHow many fish do you want to catch?\n";
+        cin >> numberFish;
+        howToFish(numberFish);
+      }
+      else if (x == 0)
+      {
+        return 0;
+      }
+      selection = -1;//return to menu
+    }
   
-  //return to menu
   
-  
-  cout << "\nThanks, the program is over.";
   
   return 0;
 }
@@ -49,7 +65,7 @@ void boilPasta()  //JZ - takes no values in and returns nothing to the calling f
 }
 
 //this is selection "2" from the menu
-void howToFish(int numFish)  //JZ takes in an integer valuse numFish and returns nothing to the calling function.
+void howToFish(int numFish)  //JZ takes in an integer value numFish and returns nothing to the calling function.
 {
   /*
   Your code goes here
